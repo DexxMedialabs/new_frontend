@@ -1,0 +1,87 @@
+/**
+* Halcyon.css effects
+* Author: Sebastian Muchui K
+* Year: 2023
+* LICENSE: MIT
+*/
+
+    .shadowed
+    {
+        box-shadow: inset 5px 5px rgba(12, 12, 12, 0.531), inset -1px -1px rgba(0, 0, 0, 0.58), 1px 3px 24px -1px rgba(10, 10, 10, 0.343);
+    }
+
+    .n-stick
+    {
+
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    .nn-stick
+    {
+        position: relative;
+    }
+
+    .n-stick-bottom
+    {
+        position: sticky;
+        bottom: 0;
+        z-index: 999;
+    }
+
+    .nn-stick-bottom
+    {
+        position: relative;
+    }
+
+    @mixin positioning
+    {
+        position: relative;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+
+
+    .hvr-grow
+    {
+        @include positioning();
+
+        &:hover
+        {
+            transform: scale(1.01);
+        }
+    }
+
+    .hvr-shrink
+    {
+        @include positioning();
+
+        &:hover
+        {
+            transform: scale(0.98);
+        }
+    }
+
+    .hvr-rotate
+    {
+        @include positioning();
+
+        &:hover
+        {
+            transform: rotate(-3deg);
+        }
+    }
+
+    .hvr-bounce-in
+    {
+        @include positioning();
+
+        &:hover
+        {
+            transform: scale(1.01);
+        }
+    }
+    

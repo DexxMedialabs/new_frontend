@@ -1,0 +1,100 @@
+/**
+* Halcyon.css displays
+* @Author: Sebastian Muchui K
+* Year: 2023
+* LICENSE: MIT
+*/
+
+@for $col from 0 through 10
+{
+    .grid-#{$col}
+    {
+        display: grid;
+        grid-template-columns: repeat(#{$col},1fr);
+        grid-gap: 10px;
+    }
+}
+
+*
+{
+
+.center-xy
+{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     align-content: center;
+     justify-content: center;
+     justify-items: center;
+}
+
+.center-x
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.center-y
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.ch-vertical
+{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+
+    *
+    {
+        margin-bottom: 10px;
+    }
+}
+}
+
+.border-collapse
+{
+    border-collapse: collapse;
+}
+
+.border-separate
+{
+    border-collapse: separate;
+}
+
+.display-none
+{
+    display: none;    
+}
+
+.display-block
+{
+    display: block;
+}
+
+.display-inline
+{
+    display: inline;
+}
+
+.display-inline-block
+{
+    display: inline-block;
+}
+
+.display-flex
+{
+    display: flex;
+}
+
+.display-inline-flex
+{
+    display: inline-flex;
+}
+
+

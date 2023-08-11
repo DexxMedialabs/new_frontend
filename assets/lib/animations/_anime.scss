@@ -1,0 +1,549 @@
+/**
+* Halcyon.css animations
+* @Author: Sebastian Muchui K
+* Year: 2023
+* LICENSE: MIT
+*/
+
+    $overshoot: 5px;
+    $delay: 0.5;
+
+@keyframes fade
+{ 
+
+    from
+    { 
+
+        opacity: 0;
+    }
+
+    to
+    { 
+
+        opacity: 1;
+    }
+}
+
+@keyframes SlideInLeft
+{ 
+
+    0%
+    { 
+
+        left: -50px;
+        opacity: 0;
+    }
+
+    25%
+    { 
+
+        left: -30px;
+        opacity: 0.25;
+    }
+
+    50%
+    { 
+
+        left: -10px;
+        opacity: 0.5;
+    }
+    
+    75%
+    { 
+
+        left: $overshoot;
+        opacity: 0.75;
+    }
+
+    100%
+    { 
+
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideInRight
+{ 
+
+    0%
+    { 
+
+        right: -50px;
+        opacity: 0;
+    }
+
+    25%
+    { 
+
+        right: -30px;
+        opacity: 0.25;
+    }
+
+    50%
+    { 
+
+        right: -10px;
+        opacity: 0.5;
+    }
+    
+    75%
+    { 
+
+        right: $overshoot;
+        opacity: 0.75;
+    }
+
+    100%
+    { 
+
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideInUp
+{ 
+
+    0%
+    { 
+
+        top: -50px;
+        opacity: 0;
+    }
+
+    25%
+    { 
+
+        top: -30px;
+        opacity: 0.25;
+    }
+
+    50%
+    { 
+
+        top: -10px;
+        opacity: 0.5;
+    }
+    
+    75%
+    { 
+
+        top: $overshoot;
+        opacity: 0.75;
+    }
+
+    100%
+    { 
+
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideInDown
+{ 
+
+    0%
+    { 
+
+        bottom: -50px;
+        opacity: 0;
+    }
+
+    25%
+    { 
+
+        bottom: -30px;
+        opacity: 0.25;
+    }
+
+    50%
+    { 
+
+        bottom: -10px;
+        opacity: 0.5;
+    }
+    
+    75%
+    { 
+
+        bottom: $overshoot;
+        opacity: 0.75;
+    }
+
+    100%
+    { 
+
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes SlideOutLeft
+{ 
+
+    0%
+    { 
+
+        left: $overshoot;
+        opacity: 1;
+    }
+
+    25%
+    { 
+
+        left: 5px;
+        opacity: 0.75;
+    }
+
+    50%
+    { 
+
+        left: -10px;
+        opacity: 0.5;
+    }
+    
+    75%
+    { 
+
+        left: -30px;
+        opacity: 0.25;
+    }
+
+    100%
+    { 
+
+        left: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes SlideOutRight
+{ 
+
+    0%
+    { 
+
+        right: $overshoot;
+        opacity: 1;
+    }
+
+    25%
+    { 
+
+        right: 5px;
+        opacity: 0.75;
+    }
+
+    50%
+    { 
+
+        right: -10px;
+        opacity: 0.5;
+    }
+    
+    75%
+    { 
+
+        right: -30px;
+        opacity: 0.25;
+    }
+
+    100%
+    { 
+
+        right: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes SlideOutUp
+{ 
+
+    0%
+    { 
+
+        top: $overshoot;
+        opacity: 1;
+    }
+
+    25%
+    { 
+
+        top: 5px;
+        opacity: 0.75;
+    }
+
+    50%
+    { 
+
+        top: -10px;
+        opacity: 0.5;
+    }
+    
+    75%
+    { 
+
+        top: -30px;
+        opacity: 0.25;
+    }
+
+    100%
+    { 
+
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes SlideOutDown
+{ 
+
+    0%
+    { 
+
+        bottom: 0px;
+        opacity: 1;
+    }
+
+    25%
+    { 
+
+        bottom: 5px;
+        opacity: 0.75;
+    }
+
+    50%
+    { 
+
+        bottom: -10px;
+        opacity: 0.5;
+    }
+    
+    75%
+    { 
+
+        bottom: -30px;
+        opacity: 0.25;
+    }
+
+    100%
+    { 
+
+        bottom: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes RotateIn
+{ 
+
+    0%
+    { 
+
+        transform: rotate(-200deg);
+        opacity: 0.5;
+    }
+
+    100%
+    { 
+
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes RotateOut
+{ 
+
+    0%
+    { 
+
+        transform: rotate(0deg);
+        opacity: 0.5;
+    }
+
+    100%
+    { 
+
+        transform: rotate(200deg);
+        opacity: 1;
+    }
+}
+
+@keyframes ZoomIn
+{ 
+
+    0%
+    { 
+
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    100%
+    { 
+
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ZoomOut
+{ 
+
+    0%
+    { 
+
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100%
+    { 
+
+        transform: scale(0);
+        opacity: 1;
+    }
+}
+
+@keyframes init
+{
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+/**
+* HandleAnimation - Make the class animation ready
+* @perform: Animation prepping
+*/
+@mixin Animation
+{ 
+
+    position: relative;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: #{$delay} + "s";
+    animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition-property: all;
+
+    /**
+    * Add delay time to child classes of the animate classes
+    * To prevent concurrent occurences of animations
+    */
+    
+    @for $i from 1 through 10
+    {
+        *:nth-child(#{$i})
+        {
+            animation-delay: #{$delay} + "s";
+        }
+
+        $delay:$delay + 0.75 ; // Increment by 0.5
+    }
+
+
+}
+
+    // Special class
+    .ch-animate{
+        animation-name: init;
+        @include Animation();
+    }
+
+.animate-left
+{ 
+
+    animation-name: SlideInLeft;
+    @include Animation();
+
+}
+
+.animate-right
+{ 
+
+    animation-name: SlideInRight;
+    @include Animation();
+}
+
+.animate-up
+{ 
+    animation: SlideInUp;
+    @include Animation();
+}
+
+.animate-down
+{ 
+    animation: SlideInDown;
+    @include Animation();
+
+}
+
+.animate-rotate
+{ 
+    animation: RotateIn;
+    @include Animation();
+
+}
+
+.animate-zoom
+{ 
+    animation: ZoomIn;
+    @include Animation();
+
+}
+
+.animate-fade
+{ 
+    animation: fade;
+    @include Animation();
+
+}
+
+.animate-left-out
+{ 
+    animation: SlideOutLeft;
+    @include Animation();
+
+}
+
+.animate-right-out
+{ 
+    animation: SlideOutRight;
+    @include Animation();
+
+}
+
+.animate-up-out
+{ 
+    animation: SlideOutUp;
+    @include Animation();
+
+}
+
+.animate-down-out
+{ 
+    animation: SlideOutDown;
+    @include Animation();
+
+}
+
+.animate-rotate-out
+{ 
+    animation: RotateOut;
+    @include Animation();
+
+}
+
+.animate-zoom-out
+{ 
+    animation: ZoomOut;
+    @include Animation();
+
+}

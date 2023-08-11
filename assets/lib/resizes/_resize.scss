@@ -1,0 +1,366 @@
+
+    /**
+    * Halcyon.css resizes
+    * Author: Sebastian Muchui K
+    * Year: 2023
+    * LICENSE: MIT
+    */
+
+
+    $nums: (); // Empty array to store the percentages
+
+    $pexels: (); // Empty arrays to contain sizes in pexels
+
+
+    @for $i from 0 through 100
+    {
+        $nums: append($nums, $i);
+    }
+
+    @for $j from 0 through 20
+    {
+        $pexels: append($pexels, $j);
+    }
+
+    
+    /* Widths in percentages */
+
+    @each $w in $nums
+    {
+        // Set the width to that corresponding percentage
+        .wp-#{$w}
+        {
+            width: #{$w} + "%";
+        }
+    }
+
+    /* Heights in percentages */
+
+    @each $n in $nums
+    {
+        // Set the height to that corresponding percentage
+        .hp-#{$n}
+        {
+            height: #{$n} + "%";
+        }
+    }
+
+    /* Widths in pexels */
+
+    @each $w in $nums
+    {
+        // Set the width to that corresponding pexel
+        .w-#{$w}
+        {
+            width: #{$w} + "px";
+        }
+    }
+
+    /* Heights in pexels */
+
+    @each $n in $nums
+    {
+        // Set the height to that corresponding pexel
+        .h-#{$n}
+        {
+            height: #{$n} + "px";
+        }
+    }
+
+    /* Width relative to viewport */
+
+    @each $w in $nums
+    {
+        // Set the width to that corresponding vw
+        .wv-#{$w}
+        {
+            width: #{$w} + "vw";
+        }
+    }
+
+    /* Height relative to viewport */
+
+    @each $n in $nums
+    {
+        // Set the height to that corresponding vh
+        .hv-#{$n}
+        {
+            height: #{$n} + "vh";
+        }
+    }
+
+    /* Padding in pexels */
+
+    @each $p in $pexels
+    {
+        // Set the padding to that corresponding pexel
+
+        .p-#{$p}
+        {
+            padding: #{$p} + "px";
+        }
+
+        .p-y
+        {
+            padding-top: #{$p} + "px";
+            padding-bottom: #{$p} + "px";
+        }
+
+        .p-top-#{$p}
+        {
+            padding-top: #{$p} + "px";
+        }
+
+        .p-bottom-#{$p}
+        {
+            padding-bottom: #{$p} + "px";
+        }
+
+        .p-left-#{$p}
+        {
+            padding-left: #{$p} + "px";
+        }
+
+        .p-right-#{$p}
+        {
+            padding-right: #{$p} + "px";
+        }
+
+
+    }
+
+    /* Margin in pexels */
+
+    @each $m in $pexels
+    {
+        // Set the margin to that corresponding pexel
+
+        .m-#{$m} // General Margin
+        {
+            margin: #{$m} + "px";
+        }
+
+        .m-y-#{$m}
+        {
+            margin-top: #{$m} + "px";
+            margin-bottom: #{$m} + "px";
+        }
+
+        .m-x-#{$m}
+        {
+            margin-left: #{$m} + "px";
+            margin-right: #{$m} + "px";
+        }
+
+        // Specified margin
+
+        .m-left-#{$m}
+        {
+            margin-left: #{$m} + "px";
+        }
+
+        .m-right-#{$m}
+        {
+            margin-right: #{$m} + "px";
+        }
+
+        .m-top-#{$m}
+        {
+            margin-top: #{$m} + "px";
+        }
+
+        .m-bottom-#{$m}
+        {
+            margin-bottom: #{$m} + "px";
+        }
+
+    }
+
+    /* Margins in percentages */
+
+    @each $m in $nums
+    {
+        // Set the margin to that corresponding percentage
+
+        .mp-#{$m}
+        {
+            margin: #{$m} + "%";
+        }
+
+        .mp-y-#{$m}
+        {
+            margin-top: #{$m} + "%";
+            margin-bottom: #{$m} + "%";
+        }
+
+        .mp-x-#{$m}
+        {
+            margin-left: #{$m} + "%";
+            margin-right: #{$m} + "%";
+        }
+
+
+        .mp-left-#{$m}
+        {
+            margin-left: #{$m} + "%";
+        }
+
+        .mp-right-#{$m}
+        {
+            margin-right: #{$m} + "%";
+        }
+
+        .mp-top-#{$m}
+        {
+            margin-top: #{$m} + "%";
+        }
+
+        .mp-bottom-#{$m}
+        {
+            margin-bottom: #{$m} + "%";
+        }
+
+    }
+
+    /* Padding in percentage */
+
+    @each $p in $nums
+    {
+        // Set the padding to that corresponding percentage
+
+        .pp-#{$p}
+        {
+            padding: #{$p} + "%";
+        }
+
+        .pp-x-#{$p}
+        {
+            padding-left: #{$p} + "%";
+            padding-right: #{$p} + "%";
+        }
+
+        .pp-y-#{$p}
+        {
+            padding-top: #{$p} + "%";
+            padding-bottom: #{$p} + "%";
+        }
+
+        .pp-left-#{$p}
+        {
+            padding-left: #{$p} + "%";
+        }
+
+        .pp-right-#{$p}
+        {
+            padding-right: #{$p} + "%";
+        }
+
+        .pp-top-#{$p}
+        {
+            padding-top: #{$p} + "%";
+        }
+
+        .pp-bottom-#{$p}
+        {
+            padding-bottom: #{$p} + "%";
+        }
+
+    }
+
+    .p-inline
+    {
+        box-sizing: border-box;
+    }
+    
+    .p-n-inline
+    {
+        box-sizing: content-box;
+    }
+
+    .n-edgy
+    {
+        border-radius: 10px;
+    }
+
+    .edgy
+    {
+        border-radius: 0;
+    }
+
+    @for $j from 0 through 100
+    {
+        .br-#{$j}
+        {
+            border-radius: #{$j} + "px";
+        }
+
+        .br-p-#{$j}
+        {
+            border-radius: #{$j} + "%";
+        }
+    }
+
+    .fl
+    {
+        position: absolute;
+        float: left;
+    }
+
+    .fr
+    {
+        position: absolute;
+        float: right;
+    }
+
+
+    // Positions
+
+    .pos-relative
+    {
+        position: relative;
+    }
+
+    .pos-absolute
+    {
+        position: absolute;
+    }
+
+    .pos-fixed
+    {
+        position: fixed;
+    }
+
+    @for $pos from 0 through 100
+    {
+        z-index-#{$pos}
+        {
+            z-index: $pos;
+        }
+
+        .l-#{$pos}
+        {
+            @extend .pos-relative;
+            left: #{$pos} + "px";
+        }
+
+        .r-#{$pos}
+        {
+            @extend .pos-relative;
+            right: #{$pos} + "px";
+        }
+
+        .t-#{$pos}
+        {
+            @extend .pos-relative;
+            top: #{$pos} + "px";
+        }
+
+        .b-#{$pos}
+        {
+            @extend .pos-relative;
+            bottom: #{$pos} + "px";
+        }
+
+        
+    }
+

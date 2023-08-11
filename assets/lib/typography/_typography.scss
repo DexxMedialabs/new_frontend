@@ -1,0 +1,401 @@
+/**
+* Halcyon.css typography
+* @Author: Sebastian Muchui K
+* Year: 2023
+* LICENSE: MIT
+*/
+
+
+//  Use colors/_colors.scss to generate
+
+.text-orange
+{
+    color: $darkorange;
+}
+
+.text-navy
+{
+    color: $navy;
+}
+
+.text-yellow
+{
+    color: $yellow;
+}
+
+.text-brown
+{
+    color: $brown;
+}
+
+.text-teal
+{
+    color: $teal;
+}
+
+.text-maroon
+{
+    color: $maroon;
+}
+
+.text-olive
+{
+    color: $olive;
+}
+
+.text-lime
+{
+    color: $lime;
+}
+
+.text-indigo
+{
+    color: $indigo;
+}
+
+.text-skyblue
+{
+    color: $skyblue;
+}
+
+.text-darkblue
+{
+    color: $darkblue;
+}
+
+.text-darkgreen
+{
+    color: $darkgreen;
+}
+
+.text-darkred
+{
+    color: $darkred;
+}
+
+.text-darkgrey
+{
+    color: $darkgrey;
+}
+
+.text-darkpurple
+{
+    color: $darkpurple;
+}
+
+.text-darkpink
+{
+    color: $darkpink;
+}
+
+.text-darkorange
+{
+    color: $darkorange;
+}
+
+.text-darkyellow
+{
+    color: $darkyellow;
+}
+
+.text-darkbrown
+{
+    color: $darkbrown;
+}
+
+.text-darkteal
+{
+    color: $darkteal;
+}
+
+.text-darkmaroon
+{
+    color: $darkmaroon;
+}
+
+.text-darkolive
+{
+    color: $darkolive;
+}
+
+.text-darklime
+{
+    color: $darklime;
+}
+
+.text-darkindigo
+{
+    color: $darkindigo;
+}
+
+.text-darkskyblue
+{
+    color: $darkskyblue;
+}
+
+.text-lightgrey
+{
+    color: $lightgrey;
+}
+
+.text-lightpurple
+{
+    color: $lightpurple;
+}
+
+.text-lightpink
+{
+    color: $lightpink;
+}
+
+.text-lightorange
+{
+    color: $lightorange;
+}
+
+.text-lightyellow
+{
+    color: $lightyellow;
+}
+
+.text-lightbrown
+{
+    color: $lightbrown;
+}
+
+.text-lightteal
+{
+    color: $lightteal;
+}
+
+.text-lightmaroon
+{
+    color: $lightmaroon;
+}
+
+.text-lightolive
+{
+    color: $lightolive;
+}
+
+.text-lightlime
+{
+    color: $lightlime;
+}
+
+.text-lightindigo
+{
+    color: $lightindigo;
+}
+
+.text-lightskyblue
+{
+    color: $lightskyblue;
+}
+
+.text-black
+{
+    color: $black;
+}
+
+.text-white
+{
+    color: $white;
+}
+
+.text-pink
+{
+    color: $pink;
+}
+
+.text-blue
+{
+    color: $blue;
+}
+
+.text-green
+{
+    color: $green;
+}
+
+.text-gold
+{
+    color: $gold;
+}
+
+.text-grey
+{
+    color: $grey;
+}
+
+.text-purple
+{
+    color: $purple;
+}
+
+.text-pink
+{
+    color: $pink;
+}
+
+.text-red
+{
+    color: $red;
+}
+
+
+
+.text-center
+{
+    text-align: center;
+}   
+
+.text-left
+{
+    text-align: left;
+}
+
+.text-right
+{
+    text-align: right;
+}
+
+.text-xxsmall
+{
+    font-size: 10px;
+}
+
+.text-small
+{
+    font-size: 14px;
+}
+
+.text-medium
+{
+    font-size: 16px;
+}
+
+.text-big
+{
+    font-size: 18px;
+}
+
+.capitalize
+{
+    text-transform: capitalize;
+}
+
+.uppercase
+{
+    text-transform: uppercase;
+}
+
+.lowercase
+{
+    text-transform: lowercase;
+}
+
+.text-large
+{
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+
+.text-xxlarge
+{
+    font-size: 32px;
+    padding-bottom: 10px;
+
+}
+
+
+@for $i from 1 through 100
+{
+    .font-#{$i}
+    {
+        font-size: #{$i}+ "px";
+    }
+
+    .text-black-l-#{$i}
+    {
+        color: lighten($black, $i);
+    }
+
+    .text-black-d-#{$i}
+    {
+        color: darken($black, $i);
+    }
+
+    .text-white-l-#{$i}
+    {
+        color: lighten($white, $i);
+    }
+
+    .text-white-d-#{$i}
+    {
+        color: darken($white, $i);
+    }
+
+    .text-pink-l-#{$i}
+    {
+        color: lighten($pink, $i);
+    }
+
+    .text-pink-d-#{$i}
+    {
+        color: darken($pink, $i);
+    }
+
+    .text-blue-l-#{$i}
+    {
+        color: lighten($blue, $i);
+    }
+
+    .text-blue-d-#{$i}
+    {
+        color: darken($blue, $i);
+    }
+
+    .text-green-l-#{$i}
+    {
+        color: lighten($green, $i);
+    }
+
+    .text-green-d-#{$i}
+    {
+        color: darken($green, $i);
+    }
+
+    .text-orange-l-#{$i}
+    {
+        color: lighten($orange, $i);
+    }   
+
+    .text-orange-d-#{$i}
+    {
+        color: darken($orange, $i);
+    }
+
+    .text-yellow-l-#{$i}
+    {
+        color: lighten($yellow, $i);
+    }
+
+    .text-yellow-d-#{$i}
+    {
+        color: darken($yellow, $i);
+    }
+
+    .text-brown-l-#{$i}
+    {
+        color: lighten($brown, $i);
+    }
+
+    .text-brown-d-#{$i}
+    {
+        color: darken($brown, $i);
+    }
+
+    
+}
