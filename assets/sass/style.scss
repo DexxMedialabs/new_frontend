@@ -1,0 +1,132 @@
+@import 'root';
+
+$header_h: 70px; /* Header height */
+
+body
+{
+    background-color: lighten($black, 1);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    header
+    {
+        @include overlay;
+        display: inline-flex;
+        width: 100%;
+        height: $header_h;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        box-sizing: border-box;
+        padding: 0.2%;
+
+        .title
+        {
+            width: 50%;
+            height: max-content;
+
+            img
+            {
+                height: 45px;
+                position: relative;
+                top: 10px;
+                left: 20%;
+            }
+        }
+
+        nav
+        {
+            width: 25%;
+            height: 40px;
+            margin-top: auto;
+
+            ul
+            {
+                width: 55%;
+                display: inline-flex;
+                justify-content: space-between;
+                margin-left: 30%;
+
+                li
+                {
+                    width: max-content;
+
+                    a
+                    {
+                        width: max-content;
+                        display: inline-flex;
+                        height: max-content;
+                        justify-content: space-between;
+                        color: $white;
+                        font-size: 14px;
+                        transition: all 1s ease-in;
+
+                        i
+                        {
+                            position: relative;
+                            right: 10px;
+                            font-size: 18px;
+                            color: $orange;
+                        }
+
+                        &:hover
+                        {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main
+    {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../img/empty.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        top: -50px;
+
+        .overlay
+        {
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+            @include overlay;
+            @extend .x-start;
+            box-sizing: border-box;
+            padding-left: 10%;
+
+            span
+            {
+                font-size: 3rem;
+                position: absolute;
+                top: 34%;
+                width: max-content;
+            }
+
+            small
+            {
+                width: 40%;
+                font-size: 18px;
+                position: relative;
+                top: 55px;
+            }
+
+            a
+            {
+                position: relative;
+                top: 75px;
+                padding: 15px 30px;
+                transition: all 1s ease-in;
+            }
+
+        }
+
+    }
+}
