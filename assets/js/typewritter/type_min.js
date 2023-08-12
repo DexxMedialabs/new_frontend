@@ -1,9 +1,9 @@
 /**
- * Typewriter animation
- * By Seb
+* Typewriter animation
+* By Seb
 */
 
-  const TypeWriter = function(txtElement, words, wait = 3000)
+  const TypeWriter = function (txtElement, words, wait = 3000) /* Create typewriter class */
   {
         this.txtElement = txtElement;
         this.words = words;
@@ -14,44 +14,44 @@
         this.isDeleting = false;
   }
 
-  TypeWriter.prototype.type = function()
+  TypeWriter.prototype.type = function() /* Tyoe method */
   {
 
-    const current = this.wordIndex % this.words.length;
-    const fullTxt = this.words[current];
+        const current = this.wordIndex % this.words.length;
+        const fullTxt = this.words[current];
     
-    if(this.isDeleting)
-    {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-    }
-    else
-    {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
+        if (this.isDeleting)
+        {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        }
+        else
+        {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
     
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-    let typeSpeed = 100;
-    
-    if(this.isDeleting)
-    {
-        typeSpeed /= 2;
-    }
-    
-    if(!this.isDeleting && this.txt === fullTxt)
-    {
-        typeSpeed = this.wait;
-        this.isDeleting = true;
-    }
-    else if(this.isDeleting && this.txt === '')
-    {
-        this.isDeleting = false;
-        this.wordIndex++;
-        typeSpeed = 500;
-    }
+        let typeSpeed = 100;
+        
+        if (this.isDeleting)
+        {
+            typeSpeed /= 2;
+        }
+        
+        if (!this.isDeleting && this.txt === fullTxt)
+        {
+            typeSpeed = this.wait;
+            this.isDeleting = true;
+        }
+        else if (this.isDeleting && this.txt === '')
+        {
+            this.isDeleting = false;
+            this.wordIndex++;
+            typeSpeed = 500;
+        }
 
-    setTimeout(() => this.type(), typeSpeed);
-  }
+        setTimeout(() => this.type(), typeSpeed);
+    }
 
     document.addEventListener('DOMContentLoaded', init);
 
